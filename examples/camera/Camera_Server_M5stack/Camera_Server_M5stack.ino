@@ -14,10 +14,6 @@ void setup()
   Serial.print("AP IP address: ");
   Serial.println(myIP);
   cam.setFrameSize(CAMERA_FS_QVGA);   //320x240
-  cam.setMirror(false);
-  cam.setVflip(false);
-  cam.setWhiteBalance(false);
-  
   esp_err_t err = cam.init();
   if(err != ESP_OK)
   {
